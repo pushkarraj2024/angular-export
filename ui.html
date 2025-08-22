@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Angular Export</title>
+</head>
+<body>
+    <button id="export">Export Angular Code</button>
+    <pre id="output"></pre>
+
+    <script>
+        document.getElementById("export").onclick = () => {
+            parent.postMessage({ pluginMessage: { type: "generate-angular" } }, "*");
+        };
+
+        window.addEventListener("message", event => {
+            const { type, payload } = event.data.pluginMessage;
+            if (type === "angular-code") {
+                document.getElementById("output").textContent =
+                    "// component.ts\n" + payload.ts +
+                    "\n\n// component.html\n" + payload.html +
+                    "\n\n// component.scss\n" + payload.css;
+            }
+        });
+    </script>
+</body>
+</html>
