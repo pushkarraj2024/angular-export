@@ -1,8 +1,11 @@
 {
-  "name": "Angular Code Exporter",
-  "version": "1.0.0",
-  "description": "Export Penpot elements as Angular component code",
-  "main": "main.js",
-  "ui": "ui.html",
-  "permissions": ["design"]
+  "name": "Your Plugin Name",
+  "description": "Brief description of what it does",
+  "code": "plugin.js",
+  "icon": "icon.png",
+  "permissions": [
+    "content:read",
+    "content:write",
+    "allow:downloads"
+  ]
 }
