@@ -1,5 +1,5 @@
 {
-  "name": "Your Plugin Name",
+  "name": "Angular Exporter",
   "description": "Brief description of what it does",
   "code": "plugin.js",
   "icon": "icon.png",
@@ -9,3 +9,4 @@
     "allow:downloads"
   ]
 }
+
